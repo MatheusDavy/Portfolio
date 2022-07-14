@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/perfil.jpg"
+      type="image/x-icon"
+    />
+    <title>Matheus Davy | Portifólio</title>
+  </head>
+  <body>
+    <!--OVERLAY ANIMATION-->
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+    <!--MENU-->
+    <div class="container__menu">
+      <div>
+        <nav>
+          <ul>
+            <li><a href="#introduction"><ion-icon name="home-outline"></ion-icon> Home</a></li>
+            <li><a href="#about"><ion-icon name="trophy-outline"></ion-icon> Sobre</a></li>
+            <li><a href="#projects"><ion-icon name="albums-outline"></ion-icon> Projetos</a></li>
+            <li><a href="#skills"><ion-icon name="flask-outline"></ion-icon> Skills</a></li>
+            <li><a href="#contact"><ion-icon name="chatbubbles-outline"></ion-icon> Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--ALL CONTENT-->
+    <main class="main">
+      <!--INITIAL ANIMATION-->
+      <section class="container__content section_height">
+        <div class="overlay__home" id="home">
+          <p class="screen">MATHEUS DAVY</p>
+          <div class="intro">
+            <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
+          </div>
+        </div>
+        <div class="overlay__home2"></div>
+      </section>
+      <!--HEADER-->
+      <header class="header">
+        <!--CALL MENU FUNCTION-->
+        <ion-icon name="grid-outline" class="show__menu" onclick="menu()"></ion-icon>
+        <!--DARK-LIGH THEME-->
+        <div class="radio__btn" onclick="theme()">
+          <div class="radio__inner"></div>
+        </div>
+      </header>
+      <!--MY CARACTERISTCS-->
+      <section class="container__principal">
+        <!--INTRODUCTION-->
+        <section class="container__introduction" id="introduction">
+          <div class="content__introduction">
+            <div class="introduction__text" data-animate="right">
+              < html >
+              <br />
+                   < body >
+              <br />
+                   < h1 >
+              <h1 class="text">
+                Eai, beleza?
+                <br />
+                Eu sou Matheus Davy
+              </h1>
+                  < / h1 >
+              <br />
+                   < p >
+              <div class="description">Desenvolvedor Fullstack</div>
+                   < / p>
+            </div>
+
+            <div class="perfil" data-animate="left">
+              <ion-icon class="html" name="logo-html5"></ion-icon>
+              <ion-icon class="react" name="logo-react"></ion-icon>
+              <ion-icon class="css" name="logo-css3"></ion-icon>
+              <img
+                src="assets/img/perfil.jpg"
+                alt="Matheus Davy"
+                onmouseover="hoverIcon()"
+              />
+              <ion-icon class="js" name="logo-javascript"></ion-icon>
+              <ion-icon class="git" name="logo-github"></ion-icon>
+            </div>
+
+            <div class="scroll__down">
+              Scroll <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </div>
+        </section>
+        <!--ABOUT ME-->
+        <section class="container__about" id="about">
+          <div class="content__about" data-animate="up">
+            <h1>Sobre Mim <ion-icon name="telescope-outline"></ion-icon></h1>
+            <p>
+              Me chamo Matheus Davy e sou desenvolvedor web, curto bastante
+              criar telas bonitas e interativas, e o que mais me motiva é
+              resolver desafios. Alguns de meus hobbies são
+              <ion-icon name="barbell-outline"></ion-icon>,
+              <ion-icon name="book-outline"></ion-icon>,
+              <ion-icon name="airplane-outline"></ion-icon>,
+              <ion-icon name="musical-notes-outline"></ion-icon>, e o melhor de
+              todos é <ion-icon name="code-slash-outline"></ion-icon>.
+              <u>Uma das minhas metas de vida é conhecer 10 países.</u>
+            </p>
+          </div>
+        </section>
+        <!--PROJECTS-->
+        <section class="container__projects" id="projects">
+          <h1>Projetos <ion-icon name="git-branch-outline"></ion-icon></h1>
+
+          <div class="content__projects">
+            <!--REGISTER/LOGIN-->
+            <div class="card">
+              <img src="assets/img/forms.png" alt="" />
+              <div class="card__content">
+                <h1>Login / Register</h1>
+                <p>mobile/desktop</p>
+                <a href="">
+                  <button>
+                    <ion-icon name="link"></ion-icon>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <!--MOVIES_API-->
+            <div class="card">
+              <img src="assets/img/forms.png" alt="" />
+              <div class="card__content">
+                <h1>MOVIES API</h1>
+                <p>desktop</p>
+                <a href="">
+                  <button>
+                    <ion-icon name="link"></ion-icon>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--SKILLS-->
+        <section class="container__skills" id="skills">
+          <h1>Skills</h1>
+          <div class="skills">
+            <div class="programming" data-animate="right">
+              <ul>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  />
+                  html
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  />
+                  css
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+                  />
+                  javascript
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  />
+                  typescript
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                  />
+                  git
+                </li>
+              </ul>
+            </div>
+
+            <div class="library" data-animate="up">
+              <ul>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  />
+                  react
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                  />
+                  bootstrap
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bulma/bulma-plain.svg"
+                  />
+                  bulma
+                </li>
+              </ul>
+            </div>
+
+            <div class="other" data-animate="left">
+              <ul>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                  />
+                  figma
+                </li>
+                <li>
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                  />
+                  photoshop
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--CONTACT-->
+        <section class="container__contact" id="contact">
+          <h1>Contato</h1>
+          <div class="social__midia" data-animate="right">
+            <a href="https://www.linkedin.com/in/matheus-davys/"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://github.com/MatheusDavy"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://www.instagram.com/matheus.davy/"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+          <div class="contact">
+             <!--WHASTAPP LINK-->
+             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5514997139182"
+             ><button><ion-icon name="logo-whatsapp"></ion-icon></button
+           ></a>
+                
+           <p><ion-icon name="mail-outline"></ion-icon> matheusdavy17@gmail.com</p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!--========SCRIPTS JS========-->
+    <!-- GSAP LIBRARY ANIMATION -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!--ION ICONS-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
