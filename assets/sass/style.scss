@@ -28,20 +28,15 @@
   --small-font-size-q: 8px;
 }
 
-* {
-  transition: var(--transition-hover);
-}
-
 body {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  width: 100%;
   height: 100%;
   font-family: "Poppins";
   background-color: var(--body-color);
   overflow-x: hidden;
   overflow-y: hidden;
-  z-index: -3;
 }
 
 //==============OVERLAY INITIAL===============//
@@ -69,19 +64,17 @@ body {
 
 .main {
   position: relative;
-  background-color: var(--body-color);
+  background-color: blue;
   transition: 0.4s;
   width: 100%;
   height: 100vh;
-  left: 0%;
-}
-.main.active{
-  left: 50%;
+  left: 0px;
 }
 .container__content {
   height: 100%;
   background-color: var(--body-color);
   z-index: 100;
+  overflow-x: hidden;
 
   .overlay__home {
     z-index: 100;
@@ -169,25 +162,24 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 0;
+  top: -400px;
   left: 0;
-  z-index:1;
-  background-color: var(--title-color);
+  z-index:8;
+  background-color: var(--body-color);
   width: 100%;
-  height: 100vh;
+  height: 400px;
   justify-content: center;
+  overflow-x: hidden;
+  transition: var(--transition-hover);
+  box-shadow: 1px 1px 15px 1px var(--text-color);
+  border-radius: 0px 0px 30px 30px;
+
 
   ion-icon{
     width: 30px;
     height: 30px;
-    color: var(--body-color);
+    color: var(--title-color);
     cursor: pointer;
-  }
-
-  ion-icon.close__menu{
-    position: relative;
-    left: 5%;
-    top: -40px;
   }
 
   nav{
@@ -204,13 +196,18 @@ body {
     align-content: center;
 
     ion-icon{
-      color: var(--body-color);
+      color: var(--title-color);
+      align-self: center;
+      margin-bottom: -4px;
     }
   }
   a{
     text-decoration: none;
-    color: var(--body-color);
+    color: var(--title-color);
   }
+}
+.container__menu.active{
+  top: 0;
 }
 
 
@@ -227,6 +224,7 @@ body {
   height: 70px;
   background-color: var(--body-color);
   transition: var(--transition-hover);
+  overflow-x: hidden;
 
   //btn theme
   .radio__btn {
@@ -240,6 +238,7 @@ body {
     border-radius: 50px;
     overflow: hidden;
     cursor: pointer;
+
   }
   .radio__btn .radio__inner {
     width: 20px;
@@ -259,10 +258,6 @@ body {
     color: var(--title-color);
     cursor: pointer;
   }
-
-  .header.active{
-    left: 70%;
-  }
 }
 
 .container__principal {
@@ -273,9 +268,10 @@ body {
   position: absolute;
   top: 70px;
   transition: var(--transition-hover);
+  overflow-x: hidden;
 }
 .container__principal.active{
-  left: 70%;
+  left: 40%;
 }
 
 .container__introduction {
@@ -608,6 +604,32 @@ body {
 }
 
 @media (max-width: 600px) {
+  .container__menu{
+    nav{
+      margin: 0;
+      display: flex;
+      width: 100%;
+    }
+    ul{
+      list-style: none;
+      margin: 0 auto;
+    }
+
+    li{
+      display: flex;
+      align-content: center;
+      font-size: 20px;
+      text-align: center;
+    }
+    ion-icon{
+      width: 30px;
+      height: 30px;
+      align-self: center;
+      margin-bottom: -4px;
+    }
+  }
+
+
   .container__introduction {
     .scroll__down {
       top: -500px;

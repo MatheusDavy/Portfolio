@@ -110,12 +110,9 @@ function changeProperty(property, value) {
   rootElement.style.setProperty(property, value);
 }
 //==========MENU=============//
-const princiapalContent = document.querySelector('.main'),
-      header = document.querySelector('header')
-
+const menuContainer = document.querySelector('.container__menu')
 function menu(){
-    princiapalContent.classList.toggle('active')
-    header.classList.toggle('active')
+  menuContainer.classList.toggle('active')
 }
 
 /*===HOVER ICONS PERFIL=======*/
